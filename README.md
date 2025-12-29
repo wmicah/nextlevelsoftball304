@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next Level Softball - Website System
 
-## Getting Started
+A fully-designed, fully-documented website system for Next Level Softball, built with Next.js and TailwindCSS, following a minimalist black/gray/white palette.
 
-First, run the development server:
+## Overview
+
+This project includes:
+
+1. **Complete Design System Documentation** (`docs/DESIGN_SYSTEM.md`)
+   - Color system with exact values and usage rules
+   - Typography system with font stacks and hierarchy
+   - Spacing & layout guidelines
+   - Component design rules
+   - Semantic HTML requirements
+
+2. **Fully Functional Website**
+   - Home page with hero, features, testimonials, and CTAs
+   - About page with mission, story, and values
+   - Programs/Services page with pricing
+   - Gallery page with lightbox viewer
+   - Contact page with form
+
+3. **Reusable Component Library**
+   - UI components (Button, Input, Card, etc.)
+   - Layout components (Navigation, Footer)
+   - Page sections (Hero, Features, Testimonials, etc.)
+   - Gallery component with lightbox functionality
+
+## Quick Start
+
+See `docs/QUICK_START.md` for detailed setup instructions.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+pnpm install
+
+# Start development server
 pnpm dev
-# or
-bun dev
+
+# Build for production
+pnpm build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The website follows a strict minimalist black/gray/white color palette:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Black** (#0B0B0C) - Primary dark backgrounds
+- **Dark Gray** (#1E1E1F) - Secondary dark backgrounds
+- **Medium Gray** (#3A3A3C) - Borders, secondary text
+- **Light Gray** (#E4E5E7) - Borders on light backgrounds
+- **Off-White** (#F7F7F8) - Alternative light background
+- **White** (#FFFFFF) - Primary light background
+- **Silver Accent** (#C9C9CC) - Subtle highlights
+- **Graphite Accent** (#2D2D2E) - Hover states
 
-## Learn More
+Complete design system documentation: `docs/DESIGN_SYSTEM.md`
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/                    # Next.js pages
+│   ├── about/             # About page
+│   ├── contact/           # Contact page
+│   ├── gallery/           # Gallery page
+│   ├── programs/          # Programs/Services page
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   └── globals.css        # Global styles
+├── components/
+│   ├── ui/                # Reusable UI components
+│   ├── layout/            # Navigation, Footer
+│   ├── sections/          # Page sections
+│   └── gallery/           # Gallery components
+└── lib/
+    └── utils.ts           # Utility functions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+docs/
+├── DESIGN_SYSTEM.md       # Complete design system
+├── IMPROVEMENTS.md        # Optional enhancements
+└── QUICK_START.md         # Setup guide
+```
 
-## Deploy on Vercel
+## Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Semantic HTML** - Proper use of semantic elements for accessibility and SEO
+- **Responsive Design** - Mobile-first approach with breakpoints at 768px and 1024px
+- **Accessibility** - ARIA labels, keyboard navigation, focus indicators
+- **Performance** - Optimized with Next.js Image component, lazy loading
+- **Type Safety** - Full TypeScript implementation
+- **Component Architecture** - Reusable, composable components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Customization
+
+### Content Updates
+
+- **Home Page**: Edit `src/app/page.tsx`
+- **About Page**: Edit `src/app/about/page.tsx`
+- **Programs Page**: Edit `src/app/programs/page.tsx`
+- **Gallery**: Add images to `public/` and update `src/app/gallery/page.tsx`
+- **Contact**: Edit `src/app/contact/page.tsx`
+
+### Styling
+
+- Colors: Update `tailwind.config.ts` (follow design system)
+- Typography: Modify `src/app/globals.css` or `tailwind.config.ts`
+- Components: Edit individual component files in `src/components/`
+
+## Next Steps
+
+1. Replace placeholder gallery images with actual photos
+2. Update all page content with your specific information
+3. Configure contact form submission (see `docs/IMPROVEMENTS.md`)
+4. Add analytics if desired
+5. Test on various devices and browsers
+6. Deploy to production
+
+## Documentation
+
+- **Design System**: `docs/DESIGN_SYSTEM.md` - Complete design guidelines
+- **Quick Start**: `docs/QUICK_START.md` - Setup and usage guide
+- **Improvements**: `docs/IMPROVEMENTS.md` - Optional enhancements
+
+## Technologies
+
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type safety
+- **TailwindCSS 4** - Utility-first CSS framework
+- **Lucide React** - Icon library
+- **Radix UI** - Accessible component primitives
+
+## License
+
+Private project for Next Level Softball.
